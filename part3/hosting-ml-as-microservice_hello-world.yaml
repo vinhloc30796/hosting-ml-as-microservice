@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  hostingmlasmicroservicehelloworld:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.8
+      CodeUri: s3://udacity-s3-bucket-vl307/hosting-ml-as-microservice_hello-world-87124220-04fd-4a76-a881-72aabfa156ba.zip
+      Description: ''
+      MemorySize: 128
+      Timeout: 3
+      Role: >-
+        arn:aws:iam::694039686945:role/service-role/hosting-ml-as-microservice_hello-world-role-8ynik7cx
