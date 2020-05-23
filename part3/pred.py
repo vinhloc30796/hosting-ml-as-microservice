@@ -11,11 +11,13 @@ download('stopwords')
 # Set stopwords
 stopwords_eng = stopwords.words('english')
 # Import model
-if not 'google.colab' in sys.modules:
+if 'google.colab' not in sys.modules:
     model_file = open('sa_classifier.pickle', 'rb')
     model = pickle.load(model_file)
     model_file.close()
 # Define functions
+
+
 def extract_features(words):
     """
     Remove stopwords from words
@@ -24,7 +26,13 @@ def extract_features(words):
     Output
     - list of string
     """
-    return [w for w in words if w not in stopwords_eng and w not in punctuation]
+    return [
+        w for w in words
+        if w not in stopwords_eng
+        and w not in punctuation
+        ]
+
+
 def bag_of_words(words):
     """
     Tally word occurences into a dict
@@ -35,8 +43,10 @@ def bag_of_words(words):
     """
     bag = {}
     for w in words:
-        bag[w] = bag.get(w,0)+1
+        bag[w] = bag.get(w, 0)+1
     return bag
+
+
 def get_sentiment(review):
     """
     Return 'pos' or 'neg' sentiment for the review
