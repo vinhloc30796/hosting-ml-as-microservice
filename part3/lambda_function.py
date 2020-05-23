@@ -27,6 +27,7 @@ def lambda_handler(event, context):
 
     return sentiment
 
-if __name__ == "__main__":
-    test_event = {'body': 'Good and comprehensive guide to Hadoop architecture. Some of the first chapters are diving really deep into architecting own cluster. I would welcome similar deep dive into automating and provisioning of Hadoop clusters, because there is only brief introduction to this topics.'}
-    lambda_handler(test_event, {})
+# For testing
+# if __name__ == "__main__":
+#     test_event = {'body': 'Good and comprehensive guide to Hadoop architecture. Some of the first chapters are diving really deep into architecting own cluster. I would welcome similar deep dive into automating and provisioning of Hadoop clusters, because there is only brief introduction to this topics.'}
+#     lambda_handler(test_event, {})
