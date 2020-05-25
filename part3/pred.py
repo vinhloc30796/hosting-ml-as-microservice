@@ -13,9 +13,11 @@ print(nltk.data.path)
 download('punkt', download_dir='./tmp')
 download('stopwords', download_dir='./tmp')
 # Set stopwords
+print('Setting stopwords...')
 stopwords_eng = stopwords.words('english')
 # Import model
 if 'google.colab' not in sys.modules:
+    print('Importing...')
     model_file = open('sa_classifier.pickle', 'rb')
     model = pickle.load(model_file)
     model_file.close()

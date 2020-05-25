@@ -3,8 +3,6 @@ import json
 from pred import get_sentiment
 
 # Define lambda_handler
-
-
 def lambda_handler(event, context):
     """Input:
     - event (dict): {'body': str}
