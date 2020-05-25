@@ -1,13 +1,17 @@
 # Import packages
-from string import punctuation
-from nltk.tokenize import word_tokenize
-from nltk import download
-from nltk.corpus import stopwords
-import pickle
 import sys
+import pickle
+import nltk
+nltk.data.path=['./tmp']
+from nltk.corpus import stopwords
+from nltk import download
+from nltk.tokenize import word_tokenize
+from string import punctuation
+
+print(nltk.data.path)
 # Download datasets
-download('punkt')
-download('stopwords')
+download('punkt', download_dir='./tmp')
+download('stopwords', download_dir='./tmp')
 # Set stopwords
 stopwords_eng = stopwords.words('english')
 # Import model
