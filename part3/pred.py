@@ -20,8 +20,6 @@ if 'google.colab' not in sys.modules:
     model = pickle.load(model_file)
     model_file.close()
 # Define functions
-
-
 def extract_features(words):
     """
     Remove stopwords from words
